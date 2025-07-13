@@ -2,39 +2,22 @@
 using namespace std;
 
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-  int n;
-  cin >> n;
-  while (n--) {
     int t;
     cin >> t;
-    bool won = false;
-    for (int i = 0; i < 10; i++) {
-      if (i % 2 == 0) {
-        if ((t + 1) % 3 == 0)
-          t += 1;
-        else if ((t - 1) % 3 == 0)
-          t -= 1;
-        else
-          t += 1;
+    while (t--) {
+        int x;
+        cin >> x;
 
-        if (t % 3 == 0) {
-          cout << "First\n";
-          won = true;
-          break;
-        }
-      } else {
-        if ((t + 1) % 3 != 0)
-          t += 1;
+        // If x divisible by 3, Vanya loses → print "Second"
+        // Else Vanya wins → print "First"
+        if (x % 3 == 0)
+            cout << "Second\n";
         else
-          t -= 1;
-      }
+            cout << "First\n";
     }
-    if (!won)
-      cout << "Second\n";
-  }
 
-  return 0;
+    return 0;
 }
