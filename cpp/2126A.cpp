@@ -4,44 +4,39 @@ using namespace std;
 #define endl '\n'
 
 int main() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
+  ios::sync_with_stdio(0);
+  cin.tie(0);
 
-    short t;
-    cin >> t;
+  int t;
+  cin >> t;
 
-    while (t--) {
-        int n, k;
-        cin >> n >> k;
-        vector<int> a(n);
+  while (t--) {
+    int x;
+    cin >> x;
 
-        for (int i = 0; i < n; i++) {
-            cin >> a[i];
-        }
-
-        int count = 0;
-        int i = 0;
-
-        while (i <= n - k) {
-            bool canHike = true;
-
-            for (int j = 0; j < k; j++) {
-                if (a[i + j] == 1) {
-                    canHike = false;
-                    break;
-                }
-            }
-
-            if (canHike) {
-                count++;
-                i += k + 1;
-            } else {
-                i++;
-            }
-        }
-
-        cout << count << endl;
+    set<char> digits_x;
+    string sx = to_string(x);
+    for (char ch : sx) {
+      digits_x.insert(ch);
     }
 
-    return 0;
+    int y = 0;
+    while (true) {
+      string sy = to_string(y);
+      bool found = false;
+      for (char ch : sy) {
+        if (digits_x.count(ch)) {
+          found = true;
+          break;
+        }
+      }
+      if (found) {
+        cout << y << endl;
+        break;
+      }
+      y++;
+    }
+  }
+
+  return 0;
 }
