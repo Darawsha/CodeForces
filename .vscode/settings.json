@@ -64,6 +64,7 @@
     "*.hpp": "cpp",
     "ostream": "cpp",
     "vector": "cpp",
-    "random": "cpp"
+    "random": "cpp",
+    "iostream": "cpp"
   }
 }
