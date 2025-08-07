@@ -1,46 +1,40 @@
-#include <algorithm>
 #include <iostream>
-#include <string>
 #include <vector>
-#define ll long long
-#define in int
-#define vi vector<int>
-#define str string
+#include <algorithm>
 using namespace std;
-#define endl '\n'
 
 int main() {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-  int n;
-  cin >> n;
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    vector<int> prefix(n);
 
-  vector<int> a(n);
-  vector<int> prefix(n);
-
-  for (int i = 0; i < n; ++i) {
-    cin >> a[i];
-    if (i == 0)
-      prefix[i] = a[i];
-    else
-      prefix[i] = prefix[i - 1] + a[i];
-  }
-
-  int m;
-  cin >> m;
-
-  for (int i = 0; i < m; ++i) {
-    int query;
-    cin >> query;
-
-    for (int j = 0; j < n; ++j) {
-      if (query <= prefix[j]) {
-        cout << (j + 1) << endl;
-        break;
-      }
+    for (int i = 0; i < n; ++i) {
+        cin >> a[i];
+        prefix[i] = a[i] + (i > 0 ? prefix[i - 1] : 0);
     }
-  }
 
-  return 0;
+    int m;
+    cin >> m;
+    while (m--) {
+        int q;
+        cin >> q;
+
+        int l = 0, r = n - 1, ans = 0;
+        while (l <= r) {
+            int mid = (l + r) / 2;
+            if (prefix[mid] >= q) {
+                ans = mid;
+                r = mid - 1;
+            } else {
+                l = mid + 1;
+            }
+        }
+        cout << ans + 1 << '\n';
+    }
+
+    return 0;
 }
