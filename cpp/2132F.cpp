@@ -1,4 +1,6 @@
 #include <algorithm>
+#include <climits>
+#include <functional>
 #include <iostream>
 #include <queue>
 #include <string>
@@ -8,7 +10,6 @@
 #define str string
 using namespace std;
 #define endl '\n'
-// May be not  coorect , i didn't test it
 int main() {
 #ifndef ONLINE_JUDGE
   freopen("../omdeh", "r", stdin);
@@ -32,7 +33,6 @@ int main() {
       g[v].push_back({u, i});
     }
 
-    // Tarjan to find bridges
     vector<int> tin(n + 1, 0), low(n + 1, 0), tout(n + 1, 0), parent(n + 1, -1),
         parentEdge(n + 1, -1);
     vector<char> isBridge(m + 1, 0);
@@ -74,11 +74,12 @@ int main() {
     cin >> q;
 
     if (forced.empty()) {
-      while (q--) {
+      for (int i = 0; i < q; ++i) {
         int c;
         cin >> c;
-        cout << -1 << endl;
+        cout << -1 << ' ';
       }
+      cout << '\n';
       continue;
     }
 
@@ -129,15 +130,16 @@ int main() {
       }
     }
 
-    while (q--) {
+    for (int i = 0; i < q; ++i) {
       int c;
       cin >> c;
       if (dist[c] == INF) {
-        cout << -1 << endl;
+        cout << -1 << ' ';
       } else {
-        cout << bestLbl[c] << endl;
+        cout << bestLbl[c] << ' ';
       }
     }
+    cout << '\n';
   }
 
   return 0;
