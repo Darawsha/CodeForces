@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/OMDEH/Desktop/CodeForces/CodeForces/cpp",
-      "program": "c:/Users/OMDEH/Desktop/CodeForces/CodeForces/cpp/build/Debug/outDebug",
+      "cwd": "c:/Users/OMDEH/Workplace/CodeForces/cpp",
+      "program": "c:/Users/OMDEH/Workplace/CodeForces/cpp/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
