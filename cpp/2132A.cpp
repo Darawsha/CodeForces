@@ -1,16 +1,13 @@
-#include <algorithm>
-#include <iostream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
 #define ll long long
-#define vi vector<int>
-#define str string
+
 using namespace std;
 #define endl '\n'
 
 int main() {
 #ifndef ONLINE_JUDGE
-  freopen("../omdeh", "r", stdin);
+  freopen("../0.3", "r", stdin);
+  freopen("../0.3res", "w", stdout);
 #endif
   ios::sync_with_stdio(0);
   cin.tie(0);
@@ -20,22 +17,17 @@ int main() {
   while (t--) {
     int n;
     cin >> n;
-    //
-    str a;
+    string a;
     cin >> a;
-    //
     int x;
     cin >> x;
-    //
-    str d, v;
+    string d, v;
     cin >> d;
     cin >> v;
     for (int i = 0; i < x; i++) {
       if (v[i] == 'D') {
-        // Dima appends to the end
         a.push_back(d[i]);
-      } else { // v[i] == 'V'
-        // Vlad prepends to the beginning
+      } else {
         a.insert(a.begin(), d[i]);
       }
     }

@@ -1,19 +1,17 @@
-#include <algorithm>
-#include <iostream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
 #define ll long long
-#define vi vector<int>
-#define str string
+
 using namespace std;
 #define endl '\n'
 
 int main() {
 #ifndef ONLINE_JUDGE
-  freopen("../omdeh", "r", stdin);
+  freopen("../0.3", "r", stdin);
+  freopen("../0.3res", "w", stdout);
 #endif
   ios::sync_with_stdio(0);
   cin.tie(0);
+
   int t;
   cin >> t;
   vector<ll> p10(19, 1);
