@@ -12,15 +12,15 @@ int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  short count;
-  cin >> count;
-
-  for (int i = 0; i < count; i++) {
-    short input;
-    cin >> input;
-    short result = input % 10 + input / 10;
-    cout << result << "\n";
+  int n;
+  cin >> n;
+  ll result = 0;
+  for (int i = 0; i < n; i++) {
+    ll p;
+    cin >> p;
+    result += p;
   }
+cout << setprecision(12) << (double)result / n << endl;
 
   return 0;
 }
