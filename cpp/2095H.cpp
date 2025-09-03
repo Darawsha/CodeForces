@@ -12,13 +12,13 @@ int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
 
+  vector<string> words = {"CODEFORCES", "EYE",   "TESTING",   "SYSTEM",
+                          "APRIL",      "FOOLS", "YOU",       "READ",
+                          "POORLY",     "GET",   "EYEGLASSES"};
+
   int n;
   cin >> n;
-  for (int i = 0; i < n; i++) {
-    int a, b;
-    cin >> a >> b;
-    cout << b - a << endl;
-  }
+  cout << words[n - 1] << '\n';
 
   return 0;
 }

@@ -12,15 +12,9 @@ int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  short count;
-  cin >> count;
-
-  for (int i = 0; i < count; i++) {
-    short input;
-    cin >> input;
-    short result = input % 10 + input / 10;
-    cout << result << "\n";
-  }
-
+  int a, b;
+  std::cin >> a >> b;
+  std::cout << 12 * a + 14 * a * b + std::abs(a - b) + (a - 3 * b) * b + 2
+            << '\n';
   return 0;
 }

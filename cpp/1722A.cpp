@@ -1,14 +1,14 @@
-#include <algorithm>
-#include <iostream>
-#include <string>
-#include <vector>
-#define str string
+#include <bits/stdc++.h>
 #define ll long long
-#define in int
+
 using namespace std;
 #define endl '\n'
 
 int main() {
+#ifndef ONLINE_JUDGE
+  freopen("../0.3", "r", stdin);
+  freopen("../0.3res", "w", stdout);
+#endif
   ios::sync_with_stdio(0);
   cin.tie(0);
 
@@ -16,12 +16,12 @@ int main() {
   cin >> t;
   while (t--) {
     int n;
-    str s;
+    string s;
     cin >> n >> s;
     if (n != 5) {
       cout << "NO" << endl;
     } else {
-      str target = "Timur";
+      string target = "Timur";
       sort(s.begin(), s.end());
       sort(target.begin(), target.end());
       if (s == target) {

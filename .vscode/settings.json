@@ -65,6 +65,9 @@
     "*.sql": "sql",
     "sstream": "cpp",
     "regex": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "valarray": "cpp",
+    "chrono": "cpp",
+    "functional": "cpp"
   }
 }
