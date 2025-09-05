@@ -66,6 +66,9 @@
     "valarray": "cpp",
     "chrono": "cpp",
     "functional": "cpp",
-    "cmath": "cpp"
+    "cmath": "cpp",
+    "bitset": "cpp",
+    "algorithm": "cpp",
+    "format": "cpp"
   }
 }
